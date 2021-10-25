@@ -2,13 +2,13 @@
 
 ## Overview of the analysis:
 
-We applied analysis, visualization and statistical skils while learning how to retrieve spacific data through Application Programming Interfaces (APIs), specifically Opean Weather Map and Google Maps APIs.
+With this project you can apply analysis, visualization and statistical skills while learning how to retrieve specific data through Application Programming Interfaces (APIs), specifically with the Open Weather Map and Google Maps APIs.
 
 ## Results:
 
-### 1. Retreive information from Open Weather Maps and CitiPy module:
+### 1. Retreive information from Open Weather Maps API and CitiPy module:
 
-Along with another lines of code, in order to get our random coordinates (latitudes and longitudes) we used ```np.random.uniform``` function to generate them. These coordines are the ones that are going to be used to find the nearest city with the help of the CitiPy module and construct our Data Frame which was exported into a file named: WeatherPy_Database.csv 
+In order to get our random coordinates (latitudes and longitudes) we used ```np.random.uniform``` function to generate them. These coordinates are the ones that are going to be used to find the nearest city with the help of the CitiPy module and construct our dataframe and export it into a csv file for further use.
 
 See full code here: ---> [https://github.com/harg74/World_Weather_Analysis/blob/main/Weather_Database/Weather_Database.ipynb]
 
@@ -26,7 +26,7 @@ lat_lngs
 
 <img width="748" alt="Screen Shot 2021-10-25 at 10 46 59" src="https://user-images.githubusercontent.com/78564912/138728227-b14a9065-8262-469a-bd52-a25eb1669133.png">
 
-Once we retreived our random coordinates, we applied a filter for the cities that had a temparature above 70º F, but below 95º F and store it in a data frame.
+Once we retreived our random coordinates, we applied a filter for the cities that had a temparature above 70º F, but below 95º F and store them in a data frame.
 
 See full code here: ---> [https://github.com/harg74/World_Weather_Analysis/blob/main/Vacation_Search/Vacation_Search.ipynb]
 
@@ -34,7 +34,7 @@ See full code here: ---> [https://github.com/harg74/World_Weather_Analysis/blob/
 
 ### 3. Add marker layer with gmaps:
 
-Based on the coordinates we were able retreive, we added Hotel Name to our dataframe and search for hotels within a radius of 5,000 meters with gmaps from the nearest city.
+Based on the coordinates and preferred temperatures we iterate over our first dataframe and added a Hotel Name column, based on the nearest city, within a radius of 5,000 meters with gmaps.
 
 <img width="1082" alt="Screen Shot 2021-10-25 at 12 32 58" src="https://user-images.githubusercontent.com/78564912/138742899-746de768-68d1-448c-8d0b-54462d0bbfb1.png">
 
@@ -83,19 +83,21 @@ hotel_df
 
 ```
 
-After these lines we added a marker layer for each city found with the coordinates to the map with all the cities available to vacation.
+After these lines, we added a marker layer for each city found with all the cities available to vacation, based on the random coodrdinates.
 
 ![WeatherPy_vacation_map](https://user-images.githubusercontent.com/78564912/138747932-d9fe72c5-a243-4618-b5b6-862cff803c02.png)
 
-### 4. Select four cities to vacation and make a itinerary:
+### 4. Select four cities to vacation and make an itinerary:
 
-Finally we selected four random cities to plan a vacation and four Brazil's cities were selected make a four stops in this cpuntry
+Finally, we selected four random cities to plan a vacation and randomly selected four Brazil's cities. Below is the itinerary which starts and end in Santa Maria, Brazil.
 
 1. Start at: Santa Maria
 2. Visit Tapes city
 3. VIsit Rio Grande
 4. Visit Cidreira
 5. End at: Santa Maria
+
+With the use of waypoints we were able to map the driving route to visit these four cities:
 
 See full code here: ---> https://github.com/harg74/World_Weather_Analysis/blob/main/Vacation_Itinerary/Vacation_Itinerary.ipynb
 
