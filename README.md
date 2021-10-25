@@ -4,7 +4,7 @@
 
 With this project you can apply analysis, visualization and statistical skills while learning how to retrieve specific data through Application Programming Interfaces (APIs), specifically with the Open Weather Map and Google Maps APIs.
 
-## Results:
+## Process and Results:
 
 ### 1. Retreive information from Open Weather Maps API and CitiPy module:
 
